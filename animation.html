@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>アニメーションするリサイズ対応折れ線グラフ | WebDesign Dackel</title>
+  <style>
+  body {
+    max-width:50em;
+    margin-right:auto;
+    margin-left:auto;
+    padding:1em;
+    font-family:sans-serif;
+  }
+  .axis path,
+  .axis line {
+    fill:none;
+    stroke:#666;
+    shape-rendering:crispEdges;
+  }
+  .x.axis path {
+    display:none;
+  }
+  .line {
+    fill:none;
+    stroke:#1572F9;
+    stroke-width:1.5px;
+  }
+  text {
+    font-size:10px;
+  }
+
+  /* リサイズへの対応用 */
+  svg {
+    width:100%;
+  }
+  @media screen and (max-width:700px){
+    text {
+      font-size:8px;
+    }
+    .line {
+      stroke-width:1px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <h1>アニメーションするリサイズ対応折れ線グラフ</h1>
+  <p>ウィンドウのりサイズとアニメーションに対応した折れ線グラフです。</p>
+
+  <svg id="chart"></svg>
+
+  <p>グラフ下のテキストです。</p>
+
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="js/animation.js"></script>
+</body>
+</html>
